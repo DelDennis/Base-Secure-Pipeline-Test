@@ -13,7 +13,7 @@ phases:
       # Install cfn-nag
       - gem install cfn-nag
 
-  test:
+  pre_build:
     commands:
       # Validate Template
 #      - aws cloudformation validate-template --template-body ./template.yaml
