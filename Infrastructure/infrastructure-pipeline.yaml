@@ -85,15 +85,14 @@ Resources:
         Status: Enabled
       BucketEncryption:
         ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              KMSMasterKeyID: !Ref KMSKey
-              SSEAlgorithm: 'aws:kms'
-        LoggingConfiguration: { }
-          PublicAccessBlockConfiguration:
-            BlockPublicAcls: true
-            BlockPublicPolicy: true
-            IgnorePublicAcls: true
-            RestrictPublicBuckets: true
+        - ServerSideEncryptionByDefault:
+            KMSMasterKeyID: !Ref KMSKey
+            SSEAlgorithm: 'aws:kms'
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
 
   CodePipelineServiceRole:
     DependsOn:

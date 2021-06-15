@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "Test-Deploy-2"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-17j50869gmwc2"
+s3_prefix = "Test-Deploy"
+region = "us-west-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "GitSourceRepo=\"Base-Secure-Pipeline-Test\" GitBranch=\"master\" GitHubUser=\"DelDennis\" PipelineEmail=\"ddennis.mil@gmail.com\" CodeBuildDockerImage=\"aws/codebuild/amazonlinux2-x86_64-standard:3.0-21.04.23\" TemplateConfigFileName=\"cfn-config.json\""

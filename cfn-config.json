@@ -1,0 +1,11 @@
+{
+  "Parameters" : {
+    "PipelineEmail" : "ddennis.mil@gmail.com",
+    "GitSourceRepo" : "Base-Secure-Pipeline-Test",
+    "GitBranch" : "master",
+    "GitHubUser" : "DelDennis",
+    "CodeBuildDockerImage" : "aws/codebuild/amazonlinux2-x86_64-standard:3.0-21.04.23",
+    "TemplateConfigFileName" : "cfn-config.json",
+    "MasterTemplateFileName" : "master.yaml"
+  }
+}
