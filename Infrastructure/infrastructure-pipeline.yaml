@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Infrastructure pipeline for eks quickstart template deployment.
+Description: Infrastructure pipeline for eks quickstart template deployment. Assumes nested stack deployment.
 
 Parameters:
   GitSourceRepo:
@@ -34,10 +34,13 @@ Parameters:
     Description: Docker image for CodeBuild project
   MasterStackTemplateName:
     Type: String
-    Description: Name of master stack template. AWS StackName of primary template
+    Description: Name of master stack template. AWS StackName of primary template this will be attached to.
   TemplateConfigFileName:
     Type: String
     Description: Filename for template parameter configuration
+  MasterTemplateFileName:
+    Type: String
+    Description: Filename of master template. ie template.yaml, master.yaml, etc.
 
 
 Resources:

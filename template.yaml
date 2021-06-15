@@ -28,8 +28,6 @@ Parameters:
     Type: String
     Description: Filename for template parameter configuration
 
-#test change for commitfafaf
-
 Resources:
   InfrastructurePipeline:
     Type: AWS::CloudFormation::Stack
