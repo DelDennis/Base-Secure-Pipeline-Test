@@ -7,16 +7,16 @@ phases:
       ruby: 2.6
 
     commands:
-    # Install CFN-Lint, taskcat, YAMLLint
-    #- pip3 install cfn-lint taskcat yamllint
+     # Install CFN-Lint, taskcat, YAMLLint
+      - pip3 install cfn-lint taskcat yamllint
 
-    # Install cfn-nag
-    #- gem install cfn-nag
+      # Install cfn-nag
+      - gem install cfn-nag
 
   build:
     commands:
       # Validate Template
-      #- aws cloudformation validate-template --template-body ./master.yaml
+      - aws cloudformation validate-template --template-body ./master.yaml
 
       # Lint Template
       #      - yamllint --strict templates/workload.template
