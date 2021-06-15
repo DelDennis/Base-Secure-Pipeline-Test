@@ -39,4 +39,4 @@ phases:
       #
       #  exit $TASKCAT_RESULT
 artifacts:
-  files: ./master.yaml
+  files: ./template.yaml
