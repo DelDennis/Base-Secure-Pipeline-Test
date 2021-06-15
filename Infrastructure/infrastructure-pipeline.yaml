@@ -1,8 +1,5 @@
----
 AWSTemplateFormatVersion: 2010-09-09
-
 Description: Infrastructure pipeline for eks quickstart template deployment.
-
 
 Parameters:
   GitSourceRepo:
