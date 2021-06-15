@@ -16,7 +16,7 @@ phases:
   build:
     commands:
       # Validate Template
-      #- aws cloudformation validate-template --template-body file://master.yaml
+      - aws cloudformation validate-template --template-body ./master.yaml
 
       # Lint Template
       #      - yamllint --strict templates/workload.template
