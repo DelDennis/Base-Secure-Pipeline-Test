@@ -24,6 +24,9 @@ Parameters:
   TemplateConfigFileName:
     Type: String
     Description: Filename for template parameter configuration
+  MasterTemplateFileName:
+    Type: String
+    Description: Filename for template parameter configuration
 
 
 
@@ -40,4 +43,4 @@ Resources:
         CodeBuildDockerImage: !Ref CodeBuildDockerImage
         MasterStackTemplateName: !Sub ${AWS::StackName}
         TemplateConfigFileName: !Ref TemplateConfigFileName
-        MasterTemplateFileName: !Ref AWS::StackName
+        MasterTemplateFileName: !Ref MasterTemplateFileName

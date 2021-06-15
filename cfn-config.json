@@ -6,6 +6,6 @@
     "GitHubUser" : "DelDennis",
     "CodeBuildDockerImage" : "aws/codebuild/amazonlinux2-x86_64-standard:3.0-21.04.23",
     "TemplateConfigFileName" : "cfn-config.json",
-    "MasterTemplateFileName" : "master.yaml"
+    "MasterTemplateFileName" : "template.yaml"
   }
 }
