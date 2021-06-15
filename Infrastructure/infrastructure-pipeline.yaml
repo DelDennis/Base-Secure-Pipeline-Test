@@ -38,9 +38,7 @@ Parameters:
   TemplateConfigFileName:
     Type: String
     Description: Filename for template parameter configuration
-  MasterTemplateFileName:
-    Type: String
-    Description: The actual filename for primary cfn template. Do not confuse with the AWS StackName
+
 
 Resources:
 
@@ -228,6 +226,8 @@ Resources:
             Value: !Ref GitSourceRepo
           - Name: REPOSITORY_BRANCH
             Value: !Ref GitBranch
+          - Name: PACKAGE_BUCKET
+            Value: aws-sam-cli-managed-default-samclisourcebucket-17j50869gmwc2
       ServiceRole: !GetAtt CodeBuildServiceRole.Arn
 
   InfrastructurePipeline:
@@ -293,7 +293,7 @@ Resources:
                 ChangeSetName: infrastructure-changeset
                 Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
                 TemplateConfiguration: !Sub "TestApp::${TemplateConfigFileName}"
-                TemplatePath: !Sub "TestApp::${MasterTemplateFileName}"
+                TemplatePath: !Sub "TestApp::packaged-template.yaml"
               RunOrder: '1'
             - Name: ApproveChangeSet
               ActionTypeId:
