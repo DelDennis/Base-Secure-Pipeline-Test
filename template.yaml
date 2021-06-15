@@ -34,7 +34,7 @@ Resources:
   InfrastructurePipeline:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: ./Infrastructure/infrastructure-pipeline.yaml
+      TemplateURL: https://s3.us-west-2.amazonaws.com/aws-sam-cli-managed-default-samclisourcebucket-17j50869gmwc2/ab7873dc5ab228047b4c9be827cafbf5.template
       Parameters:
         PipelineEmail: !Ref PipelineEmail
         GitSourceRepo: !Ref GitSourceRepo
