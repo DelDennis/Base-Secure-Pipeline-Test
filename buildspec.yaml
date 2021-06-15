@@ -16,14 +16,14 @@ phases:
   build:
     commands:
       # Validate Template
-      - aws cloudformation validate-template --template-body ./master.yaml
+      - aws cloudformation validate-template --template-body ./template.yaml
 
       # Lint Template
       #      - yamllint --strict templates/workload.template
-      #      - cfn-lint --include-checks I --template ./master.yaml
+      #      - cfn-lint --include-checks I --template ./template.yaml
 
       # Run CFN Nag
-      #      - cfn_nag --fail-on-warnings --output-format txt ./master.yaml
+      #      - cfn_nag --fail-on-warnings --output-format txt ./template.yaml
 
       # Run taskcat, strip color escape codes, output taskcat log files on STDOUT, and exit with result of taskcat
       #- |
