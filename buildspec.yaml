@@ -42,6 +42,6 @@ phases:
 
 artifacts:
   files:
-    - ./packaged-template.yaml
+    - ./*
 
 
