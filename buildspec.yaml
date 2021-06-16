@@ -42,7 +42,7 @@ phases:
 
 artifacts:
   files:
-    - ./packaged-template.yaml
-    - ./config/cfn-config.json
+    - packaged-template.yaml
+    - cfn-config.json
 
 
