@@ -38,9 +38,6 @@ Parameters:
   TemplateConfigFileName:
     Type: String
     Description: Filename for template parameter configuration
-  MasterTemplateFileName:
-    Type: String
-    Description: Filename of master template. ie template.yaml, master.yaml, etc.
 
 
 Resources:
