@@ -295,7 +295,7 @@ Resources:
                 StackName: !Ref MasterStackTemplateName
                 ChangeSetName: infrastructure-changeset
                 Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
-                TemplateConfiguration: !Sub "BuildOutput::/config/${TemplateConfigFileName}"
+                TemplateConfiguration: !Sub "BuildOutput::./config/${TemplateConfigFileName}"
                 TemplatePath: !Sub "BuildOutput::packaged-template.yaml"
               RunOrder: '1'
             - Name: ApproveChangeSet
