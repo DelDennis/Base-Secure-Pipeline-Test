@@ -14,7 +14,7 @@ Parameters:
     NoEcho: true
     Type: String
     Default: '{{resolve:secretsmanager:/quickstart/ekspipeline/githubtoken:SecretString:GHToken}}'
-    Description: GitHub Token. Must be defined in AWS Secrets Manager. https://github.com/settings/tokens
+    Description: GitHub Token. Must be defined in AWS Secrets Manager. -->https://github.com/settings/tokens
   PipelineEmail:
     Type: String
     Description: "Email address for pipeline approval notifications"
