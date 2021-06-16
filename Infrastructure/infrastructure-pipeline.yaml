@@ -35,7 +35,7 @@ Parameters:
   MasterStackTemplateName:
     Type: String
     Description: Name of master stack template. AWS StackName of primary template this will be attached to.
-  TemplateConfigFileName:
+  TemplateConfigLocation:
     Type: String
     Description: Filename for template parameter configuration
 
@@ -292,7 +292,7 @@ Resources:
                 StackName: !Ref MasterStackTemplateName
                 ChangeSetName: infrastructure-changeset
                 Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
-                TemplateConfiguration: !Sub "BuildOutput::config/${TemplateConfigFileName}"
+                TemplateConfiguration: !Sub "BuildOutput::${TemplateConfigLocation}"
                 TemplatePath: !Sub "BuildOutput::packaged-template.yaml"
               RunOrder: '1'
             - Name: ApproveChangeSet
