@@ -288,15 +288,15 @@ Resources:
                 Provider: CloudFormation
                 Version: 1
               InputArtifacts:
-                - Name: TestApp
+                - Name: BuildOutput
               Configuration:
                 ActionMode: CHANGE_SET_REPLACE
                 RoleArn: !GetAtt [CloudFormationExecutionRole, Arn]
                 StackName: !Ref MasterStackTemplateName
                 ChangeSetName: infrastructure-changeset
                 Capabilities: CAPABILITY_IAM,CAPABILITY_AUTO_EXPAND
-                #TemplateConfiguration: !Sub "TestApp::${TemplateConfigFileName}"
-                TemplatePath: !Sub "TestApp::packaged-template.yaml"
+                #TemplateConfiguration: !Sub "BuildOutput::${TemplateConfigFileName}"
+                TemplatePath: !Sub "BuildOutput::packaged-template.yaml"
               RunOrder: '1'
             - Name: ApproveChangeSet
               ActionTypeId:
